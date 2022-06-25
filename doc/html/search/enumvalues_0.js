@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['ntag21x_5faccess_5fnfc_5fcounter_293',['NTAG21X_ACCESS_NFC_COUNTER',['../group__ntag21x__basic__driver.html#gga1afb0d978058935f9214a9d2620d27d2afb25c0929e0afb2a26da330e7759b715',1,'driver_ntag21x.h']]],
+  ['ntag21x_5faccess_5fnfc_5fcounter_5fpassword_5fprotection_294',['NTAG21X_ACCESS_NFC_COUNTER_PASSWORD_PROTECTION',['../group__ntag21x__basic__driver.html#gga1afb0d978058935f9214a9d2620d27d2a10a3678cb894e7756cbeb9045b1335dc',1,'driver_ntag21x.h']]],
+  ['ntag21x_5faccess_5fread_5fprotection_295',['NTAG21X_ACCESS_READ_PROTECTION',['../group__ntag21x__basic__driver.html#gga1afb0d978058935f9214a9d2620d27d2a39bf963874ad66ebd46828d99a058181',1,'driver_ntag21x.h']]],
+  ['ntag21x_5faccess_5fuser_5fconf_5fprotection_296',['NTAG21X_ACCESS_USER_CONF_PROTECTION',['../group__ntag21x__basic__driver.html#gga1afb0d978058935f9214a9d2620d27d2a3d1fbe7cd43d0c6ffa2969b11a4c0977',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fbool_5ffalse_297',['NTAG21X_BOOL_FALSE',['../group__ntag21x__basic__driver.html#ggae6e4463561520eaf725e4ee66c8fec61a66632476e950e6add081c85371274ce9',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fbool_5ftrue_298',['NTAG21X_BOOL_TRUE',['../group__ntag21x__basic__driver.html#ggae6e4463561520eaf725e4ee66c8fec61a42f85a80d92050ee04c18726a5b408d1',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fcapability_5fcontainer_5f144_5fbyte_5fntag213_299',['NTAG21X_CAPABILITY_CONTAINER_144_BYTE_NTAG213',['../group__ntag21x__basic__driver.html#gga0423263df8ce7ee69e3bc2d53b5fde8fa153053cffc1286585e1a66c999dbc537',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fcapability_5fcontainer_5f496_5fbyte_5fntag215_300',['NTAG21X_CAPABILITY_CONTAINER_496_BYTE_NTAG215',['../group__ntag21x__basic__driver.html#gga0423263df8ce7ee69e3bc2d53b5fde8fab6be03d5868879f7109c633ff703083b',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fcapability_5fcontainer_5f872_5fbyte_5fntag216_301',['NTAG21X_CAPABILITY_CONTAINER_872_BYTE_NTAG216',['../group__ntag21x__basic__driver.html#gga0423263df8ce7ee69e3bc2d53b5fde8facf46bedcc8f98d48f54e902376cf668e',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmirror_5fbyte_5f0_302',['NTAG21X_MIRROR_BYTE_0',['../group__ntag21x__basic__driver.html#ggabb4f03301d13064e41f49eb00339baf3a41d40cce02755055a0857b4b000aee76',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmirror_5fbyte_5f1_303',['NTAG21X_MIRROR_BYTE_1',['../group__ntag21x__basic__driver.html#ggabb4f03301d13064e41f49eb00339baf3a2f9c078c76d1d9eae046c33397daf61f',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmirror_5fbyte_5f2_304',['NTAG21X_MIRROR_BYTE_2',['../group__ntag21x__basic__driver.html#ggabb4f03301d13064e41f49eb00339baf3a7cd0ff45b9d64c5a36820f0a628a0650',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmirror_5fbyte_5f3_305',['NTAG21X_MIRROR_BYTE_3',['../group__ntag21x__basic__driver.html#ggabb4f03301d13064e41f49eb00339baf3a61e4164e73b0d23d52ba9d5c9f77d140',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmirror_5fnfc_5fcounter_5fascii_306',['NTAG21X_MIRROR_NFC_COUNTER_ASCII',['../group__ntag21x__basic__driver.html#ggaf2d83567bb7d1d1a1d03da6809a20daea5662508ed1f1d75860a70929a287fbee',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmirror_5fno_5fascii_307',['NTAG21X_MIRROR_NO_ASCII',['../group__ntag21x__basic__driver.html#ggaf2d83567bb7d1d1a1d03da6809a20daeadf332a20a8cb5ffa4660823e39993646',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmirror_5fuid_5fascii_308',['NTAG21X_MIRROR_UID_ASCII',['../group__ntag21x__basic__driver.html#ggaf2d83567bb7d1d1a1d03da6809a20daea805ed47c026d32bcb7c66dccd15864e1',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmirror_5fuid_5fnfc_5fcounter_5fascii_309',['NTAG21X_MIRROR_UID_NFC_COUNTER_ASCII',['../group__ntag21x__basic__driver.html#ggaf2d83567bb7d1d1a1d03da6809a20daeae2778f5f7c7ddd39b37e9332f36664dc',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmodulation_5fmode_5fnormal_310',['NTAG21X_MODULATION_MODE_NORMAL',['../group__ntag21x__basic__driver.html#gga7c3f6722dc35c15a16a60bee8e2421a5a79d9083f7f6906c474a5d159d15bb6e3',1,'driver_ntag21x.h']]],
+  ['ntag21x_5fmodulation_5fmode_5fstrong_311',['NTAG21X_MODULATION_MODE_STRONG',['../group__ntag21x__basic__driver.html#gga7c3f6722dc35c15a16a60bee8e2421a5a359526a5e68b660b5a7ed8b1de4c4ecf',1,'driver_ntag21x.h']]],
+  ['ntag21x_5ftype_5f213_5f5_5f6_312',['NTAG21X_TYPE_213_5_6',['../group__ntag21x__basic__driver.html#gga00deb5eb62eb71f6729f03ed6724a7faada0a0137f1bbbbfc8da8db8001e673e0',1,'driver_ntag21x.h']]],
+  ['ntag21x_5ftype_5finvalid_313',['NTAG21X_TYPE_INVALID',['../group__ntag21x__basic__driver.html#gga00deb5eb62eb71f6729f03ed6724a7faa15a648492c0e0379c45b104bdc0b1b8c',1,'driver_ntag21x.h']]]
+];
