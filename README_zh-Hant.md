@@ -9,6 +9,7 @@
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/ntag21x/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
 NTAG213、NTAG215和NTAG216由恩智浦電晶體公司開發，並作為標準NFC標籤IC與NFC設備或NFC相容型近距離耦合設備配合，廣泛用於福斯市場應用，如零售、遊戲和消費電子等。 NTAG213、NTAG215和NTAG216（以下統稱為NTAG21x）的設計完全符合NFC Forum NFC Forum Type 2標籤和ISO/IEC14443 Type A規範。 目標應用包括戶外和印刷媒體智慧廣告、SoLoMo應用、產品驗證、NFC貨架標籤、手機配套標籤。 目標用例包括戶外智慧廣告、產品認證、手機配套標籤、Bluetooth ® 或Wi-Fi配對、電子貨架標籤和名片。 還可對NTAG21x記憶體進行分段，以同時部署多個應用。 由於NTAG21x標籤IC具有高輸入電容，囙此該產品尤其適用於要求具有小尺寸的應用，而不會降低效能。 小型NFC標籤可更輕鬆地嵌入產品標籤或電子設備等目標中。 NTAG21x的機械和電力規格可滿足inlay和標籤製造商的要求而量身定制。
+
 LibDriver NTAG21X是LibDriver推出的NTAG21X全功能驅動，該驅動提供頁讀取，頁寫入等功能並且它符合MISRA標準。
 
 ### 目錄
