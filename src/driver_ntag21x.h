@@ -152,7 +152,7 @@ typedef struct ntag21x_handle_s
                                        uint8_t *out_buf, uint8_t *out_len);        /**< point to a contactless_transceiver function address */
     void (*delay_ms)(uint32_t ms);                                                 /**< point to a delay_ms function address */
     void (*debug_print)(const char *const fmt, ...);                               /**< point to a debug_print function address */
-    uint8_t type;                                                                  /**< classic type */
+    uint8_t type;                                                                  /**< ntag type */
     uint8_t inited;                                                                /**< inited flag */
     uint8_t end_page;                                                              /**< end page */
 } ntag21x_handle_t;
