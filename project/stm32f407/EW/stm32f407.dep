@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>5</fileVersion>
-    <fileChecksum>1061383598</fileChecksum>
+    <fileChecksum>2922572087</fileChecksum>
     <configuration>
         <name>Release</name>
         <outputs>
-            <file>$PROJ_DIR$\..\..\..\example\driver_ntag21x_basic.c</file>
-            <file>$PROJ_DIR$\..\..\..\src\driver_ntag21x.c</file>
-            <file>$PROJ_DIR$\..\driver\src\stm32f407_driver_ntag21x_interface.c</file>
-            <file>$PROJ_DIR$\..\..\..\test\driver_ntag21x_card_test.c</file>
+            <file>$PROJ_DIR$\..\hal\asm\startup_stm32f407xx_ew.s</file>
         </outputs>
         <forcedrebuild>
             <name>[REBUILD_ALL]</name>
