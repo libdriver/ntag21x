@@ -50,6 +50,8 @@ LibDriver NTAG21X는 LibDriver에서 출시한 NTAG21X의 전체 기능 드라�
 #### example basic
 
 ```C
+#include "driver_ntag21x_basic.h"
+
 uint8_t res;
 uint8_t i;
 uint8_t id[8];

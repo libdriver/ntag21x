@@ -27,15 +27,15 @@ LibDriver NTAG21X is the full function driver of NTAG21X launched by LibDriver.I
 
 /src includes LibDriver NTAG21X source files.
 
-/interface includes LibDriver NTAG21X RF platform independent template。
+/interface includes LibDriver NTAG21X RF platform independent template.
 
-/test includes LibDriver NTAG21X driver test code and this code can test the chip necessary function simply。
+/test includes LibDriver NTAG21X driver test code and this code can test the chip necessary function simply.
 
 /example includes LibDriver NTAG21X sample code.
 
 /doc includes LibDriver NTAG21X offline document.
 
-/datasheet includes NTAG21X datasheet。
+/datasheet includes NTAG21X datasheet.
 
 /project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
 
@@ -50,6 +50,8 @@ Add /src, /interface and /example to your project.
 #### example basic
 
 ```C
+#include "driver_ntag21x_basic.h"
+
 uint8_t res;
 uint8_t i;
 uint8_t id[8];

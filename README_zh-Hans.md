@@ -50,6 +50,8 @@ LibDriver NTAG21X是LibDriver推出的NTAG21X全功能驱动，该驱动提供�
 #### example basic
 
 ```C
+#include "driver_ntag21x_basic.h"
+
 uint8_t res;
 uint8_t i;
 uint8_t id[8];
