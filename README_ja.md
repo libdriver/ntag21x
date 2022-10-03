@@ -50,6 +50,8 @@ LibDriver NTAG21Xは、LibDriverによって起動されたNTAG21Xの全機能�
 #### example basic
 
 ```C
+#include "driver_ntag21x_basic.h"
+
 uint8_t res;
 uint8_t i;
 uint8_t id[8];

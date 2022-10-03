@@ -1,6 +1,6 @@
-### 1. chip
+### 1. Chip
 
-#### 1.1 chip info
+#### 1.1 Chip Info
 
 chip name : STM32F407ZGT6.
 
@@ -16,9 +16,9 @@ gpio pin: INT PB0.
 
 reset pin: RESET PA8.
 
-### 2. shell
+### 2. Shell
 
-#### 2.1 shell parameter
+#### 2.1 Shell Parameter
 
 baud rate: 115200.
 
@@ -30,9 +30,9 @@ parity: none.
 
 flow control: none.
 
-### 3. ntag21x
+### 3. NTAG21X
 
-#### 3.1 command Instruction
+#### 3.1 Command Instruction
 
 ​           ntag21x is a basic command which can test all ntag21x driver function:
 
@@ -84,7 +84,7 @@ flow control: none.
 
 ​           -c authenticate <pwd> <pack>        password authenticate .pwd is the password,pack is the checked pack.
 
-#### 3.2 command example
+#### 3.2 Command Example
 
 ```shell
 ntag21x -i
