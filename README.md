@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver NTAG21X
@@ -11,6 +11,12 @@
 NTAG 213, NTAG 215, and NTAG 216 have been developed by NXP® Semiconductors as standard NFC tag ICs to be used in mass-market applications such as retail, gaming, and consumer electronics, in combination with NFC devices or NFC-compliant Proximity Coupling Devices. NTAG 213, NTAG 215, and NTAG 216 (from now on, generally called NTAG 21x) are designed to fully comply to NFC Forum Type 2 Tag and ISO/IEC14443 Type A specifications.Target applications include Out-of-Home and print media smart advertisement, SoLoMo applications, product authentication, NFC shelf labels, and mobile companion tags.Target use cases include Out-of-Home smart advertisement, product authentication, mobile companion tags, Bluetooth® or Wi-Fi pairing, electronic shelf labels, and business cards. NTAG 21x memory can also be segmented to implement multiple applications at the same time.Thanks to the high input capacitance, NTAG 21x tag ICs are particularly tailored for applications requiring small footprints, without compromise on performance. Small NFC tags can be more easily embedded into, e.g., product labels or electronic devices.The mechanical and electrical specifications of NTAG 21x are tailored to meet the requirements of inlay and tag manufacturers.
 
 LibDriver NTAG21X is the full function driver of NTAG21X launched by LibDriver.It provides the function of read page, write page and so on. LibDriver is MISRA compliant.
+
+This repository includes submodule and you shold add "--recursive" to clone the whole project.
+
+```shell
+git clone https://github.com/hepingood/ntag21x.git --recursive
+```
 
 ### Table of Contents
 
@@ -38,6 +44,8 @@ LibDriver NTAG21X is the full function driver of NTAG21X launched by LibDriver.I
 /datasheet includes NTAG21X datasheet.
 
 /project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
+
+/misra includes the LibDriver MISRA code scanning results.
 
 ### Install
 
@@ -259,13 +267,13 @@ return 0;
 
 ### Document
 
-Online documents: https://www.libdriver.com/docs/ntag21x/index.html
+Online documents: [https://www.libdriver.com/docs/ntag21x/index.html](https://www.libdriver.com/docs/ntag21x/index.html).
 
-Offline documents: /doc/html/index.html
+Offline documents: /doc/html/index.html.
 
 ### Contributing
 
-Please sent an e-mail to lishifenging@outlook.com
+Please refer to CONTRIBUTING.md.
 
 ### License
 
@@ -313,4 +321,4 @@ SOFTWARE.
 
 ### Contact Us
 
-Please sent an e-mail to lishifenging@outlook.com
+Please sent an e-mail to lishifenging@outlook.com.

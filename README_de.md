@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver NTAG21X
@@ -11,6 +11,12 @@
 NTAG 213, NTAG 215 und NTAG 216 wurden von NXP® Semiconductors als Standard-NFC-Tag-ICs entwickelt, die in Massenmarktanwendungen wie Einzelhandel, Spiele und Unterhaltungselektronik in Kombination mit NFC-Geräten oder NFC-kompatibler Näherungskopplung verwendet werden sollen Geräte. NTAG 213, NTAG 215 und NTAG 216 (von nun an allgemein als NTAG 21x bezeichnet) sind so konzipiert, dass sie den NFC-Forum-Typ-2-Tag- und ISO/IEC14443-Typ-A-Spezifikationen vollständig entsprechen. Zu den Zielanwendungen gehören Out-of-Home- und Printmedien-Smart Werbung, SoLoMo-Anwendungen, Produktauthentifizierung, NFC-Regaletiketten und mobile Begleiter-Tags. Zielanwendungsfälle umfassen intelligente Out-of-Home-Werbung, Produktauthentifizierung, mobile Begleiter-Tags, Bluetooth®- oder Wi-Fi-Kopplung, elektronische Regaletiketten und Unternehmen Karten. Der NTAG 21x-Speicher kann auch segmentiert werden, um mehrere Anwendungen gleichzeitig zu implementieren. Dank der hohen Eingangskapazität sind NTAG 21x-Tag-ICs besonders auf Anwendungen zugeschnitten, die einen geringen Platzbedarf erfordern, ohne Kompromisse bei der Leistung einzugehen. Kleine NFC-Tags lassen sich beispielsweise einfacher in Produktetiketten oder elektronische Geräte einbetten. Die mechanischen und elektrischen Spezifikationen des NTAG 21x sind auf die Anforderungen von Inlay- und Tag-Herstellern zugeschnitten.
 
 LibDriver NTAG21X ist der voll funktionsfähige Treiber von NTAG21X, der von LibDriver gestartet wurde. Er bietet die Funktion zum Lesen von Seiten, Schreiben von Seiten usw. LibDriver ist MISRA-konform.
+
+Dieses Repository enthält ein Submodul und Sie sollten "--recursive" hinzufügen, um das gesamte Projekt zu klonen.
+
+```shell
+git clone https://github.com/hepingood/ntag21x.git --recursive
+```
 
 ### Inhaltsverzeichnis
 
@@ -38,6 +44,8 @@ LibDriver NTAG21X ist der voll funktionsfähige Treiber von NTAG21X, der von Lib
 /Datenblatt enthält NTAG21X-Datenblatt.
 
 /project enthält den allgemeinen Beispielcode für Linux- und MCU-Entwicklungsboards. Alle Projekte verwenden das Shell-Skript, um den Treiber zu debuggen, und die detaillierten Anweisungen finden Sie in der README.md jedes Projekts.
+
+/misra enthält die Ergebnisse des LibDriver MISRA Code Scans.
 
 ### Installieren
 
@@ -259,13 +267,13 @@ return 0;
 
 ### Dokument
 
-Online-Dokumente: https://www.libdriver.com/docs/ntag21x/index.html
+Online-Dokumente: [https://www.libdriver.com/docs/ntag21x/index.html](https://www.libdriver.com/docs/ntag21x/index.html).
 
-Offline-Dokumente: /doc/html/index.html
+Offline-Dokumente: /doc/html/index.html.
 
 ### Beitrag
 
-Bitte senden Sie eine E-Mail an lishifenging@outlook.com
+Bitte beachten Sie CONTRIBUTING.md.
 
 ### Lizenz
 
@@ -313,4 +321,4 @@ SOFTWARE.
 
 ### Kontaktieren Sie uns
 
-Bitte senden Sie eine E-Mail an lishifenging@outlook.com
+Bitte senden Sie eine E-Mail an lishifenging@outlook.com.

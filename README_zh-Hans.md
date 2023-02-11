@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver NTAG21X
@@ -11,6 +11,12 @@
 NTAG213、NTAG215和NTAG216由恩智浦半导体公司开发，并作为标准NFC标签IC与NFC设备或NFC兼容型近距离耦合设备配合，广泛用于大众市场应用，如零售、游戏和消费电子等。NTAG213、NTAG215和NTAG216 (以下统称为NTAG21x)的设计完全符合NFC Forum NFC Forum Type 2标签和ISO/IEC14443 Type A规范。目标应用包括户外和印刷媒体智能广告、SoLoMo应用、产品验证、NFC货架标签、手机配套标签。目标用例包括户外智能广告、产品认证、手机配套标签、Bluetooth®或Wi-Fi配对、电子货架标签和名片。还可对NTAG21x存储器进行分段，以同时部署多个应用。由于NTAG21x标签IC具有高输入电容，因此该产品尤其适用于要求具有小尺寸的应用，而不会降低性能。小型NFC标签可更轻松地嵌入产品标签或电子设备等目标中。NTAG21x的机械和电气规格可满足inlay和标签制造商的要求而量身定制。
 
 LibDriver NTAG21X是LibDriver推出的NTAG21X全功能驱动，该驱动提供页读取，页写入等功能并且它符合MISRA标准。
+
+本仓库包含子模块，您需要增加“--recursive”选项完整克隆整个工程。
+
+```shell
+git clone https://github.com/hepingood/ntag21x.git --recursive
+```
 
 ### 目录
 
@@ -38,6 +44,8 @@ LibDriver NTAG21X是LibDriver推出的NTAG21X全功能驱动，该驱动提供�
 /datasheet目录包含了NTAG21X数据手册。
 
 /project目录包含了常用Linux与单片机开发板的工程样例。所有工程均采用shell脚本作为调试方法，详细内容可参考每个工程里面的README.md。
+
+/misra目录包含了LibDriver MISRA代码扫描结果。
 
 ### 安装
 
@@ -259,13 +267,13 @@ return 0;
 
 ### 文档
 
-在线文档: https://www.libdriver.com/docs/ntag21x/index.html
+在线文档: [https://www.libdriver.com/docs/ntag21x/index.html](https://www.libdriver.com/docs/ntag21x/index.html)。
 
-离线文档: /doc/html/index.html
+离线文档: /doc/html/index.html。
 
 ### 贡献
 
-请联系lishifenging@outlook.com
+请参考CONTRIBUTING.md。
 
 ### 版权
 
@@ -281,4 +289,4 @@ MIT 许可证（MIT）
 
 ### 联系我们
 
-请联系lishifenging@outlook.com
+请联系lishifenging@outlook.com。

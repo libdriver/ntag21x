@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver NTAG21X
@@ -11,6 +11,12 @@
 NTAG 213、NTAG 215、およびNTAG 216は、NXP®Semiconductorsによって、小売、ゲーム、家庭用電化製品などのマスマーケットアプリケーションで使用される標準のNFCタグICとして、NFCデバイスまたはNFC準拠の近接結合と組み合わせて開発されました。デバイス。 NTAG 213、NTAG 215、およびNTAG 216（以降、一般にNTAG 21xと呼ばれる）は、NFCフォーラムタイプ2タグおよびISO /IEC14443タイプA仕様に完全に準拠するように設計されています。対象アプリケーションには、家庭外および印刷メディアスマートが含まれます。広告、SoLoMoアプリケーション、製品認証、NFCシェルフラベル、およびモバイルコンパニオンタグ。対象となるユースケースには、家庭外スマート広告、製品認証、モバイルコンパニオンタグ、Bluetooth®またはWi-Fiペアリング、電子シェルフラベル、およびビジネスが含まれます。カード。 NTAG 21xメモリは、同時に複数のアプリケーションを実装するためにセグメント化することもできます。高い入力容量のおかげで、NTAG 21xタグICは、パフォーマンスを犠牲にすることなく、小さなフットプリントを必要とするアプリケーション向けに特に調整されています。小さなNFCタグは、製品ラベルや電子機器などに簡単に埋め込むことができます。NTAG21xの機械的および電気的仕様は、インレイおよびタグメーカーの要件を満たすように調整されています。
 
 LibDriver NTAG21Xは、LibDriverによって起動されたNTAG21Xの全機能ドライバーであり、ページの読み取り、ページの書き込みなどの機能を提供します。 LibDriverはMISRAに準拠しています。
+
+このリポジトリにはサブモジュールが含まれており、「--recursive」を追加してプロジェクト全体を複製する必要があります。
+
+```shell
+git clone https://github.com/hepingood/ntag21x.git --recursive
+```
 
 ### 目次
 
@@ -38,6 +44,8 @@ LibDriver NTAG21Xは、LibDriverによって起動されたNTAG21Xの全機能�
 / datasheetディレクトリには、NTAG21Xデータシートが含まれています。
 
 / projectディレクトリには、一般的に使用されるLinuxおよびマイクロコントローラー開発ボードのプロジェクトサンプルが含まれています。 すべてのプロジェクトは、デバッグ方法としてシェルスクリプトを使用しています。詳細については、各プロジェクトのREADME.mdを参照してください。
+
+/ misraはLibDriver misraコードスキャン結果を含む。
 
 ### インストール
 
@@ -259,13 +267,13 @@ return 0;
 
 ### ドキュメント
 
-オンラインドキュメント: https://www.libdriver.com/docs/ntag21x/index.html
+オンラインドキュメント: [https://www.libdriver.com/docs/ntag21x/index.html](https://www.libdriver.com/docs/ntag21x/index.html)。
 
-オフラインドキュメント: /doc/html/index.html
+オフラインドキュメント: /doc/html/index.html。
 
 ### 貢献
 
-お問い合わせくださいlishifenging@outlook.com
+CONTRIBUTING.mdを参照してください。
 
 ### 著作権
 
@@ -281,4 +289,4 @@ MITライセンス（MIT）
 
 ### 連絡して
 
-お問い合わせくださいlishifenging@outlook.com
+お問い合わせくださいlishifenging@outlook.com。

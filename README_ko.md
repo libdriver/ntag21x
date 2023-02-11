@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver NTAG21X
@@ -11,6 +11,12 @@
 NTAG 213, NTAG 215 및 NTAG 216은 NXP® Semiconductors에서 NFC 장치 또는 NFC 호환 근접 커플링과 함께 소매, 게임, 소비자 전자 제품과 같은 대중 시장 애플리케이션에 사용하기 위해 표준 NFC 태그 IC로 개발했습니다. 장치. NTAG 213, NTAG 215 및 NTAG 216(지금부터 일반적으로 NTAG 21x라고 함)은 NFC 포럼 유형 2 태그 및 ISO/IEC14443 유형 A 사양을 완전히 준수하도록 설계되었습니다. 대상 응용 프로그램에는 가정 외 및 인쇄 미디어 스마트가 포함됩니다. 광고, SoLoMo 애플리케이션, 제품 인증, NFC 선반 라벨 및 모바일 컴패니언 태그. 대상 사용 사례에는 집 밖의 스마트 광고, 제품 인증, 모바일 컴패니언 태그, Bluetooth® 또는 Wi-Fi 페어링, 전자 선반 라벨 및 비즈니스가 포함됩니다. 카드. NTAG 21x 메모리는 동시에 여러 애플리케이션을 구현하도록 분할할 수도 있습니다. 높은 입력 정전 용량 덕분에 NTAG 21x 태그 IC는 성능 저하 없이 작은 설치 공간이 필요한 애플리케이션에 특히 적합합니다. 소형 NFC 태그는 예를 들어 제품 라벨이나 전자 장치에 더 쉽게 삽입할 수 있습니다. NTAG 21x의 기계적 및 전기적 사양은 인레이 및 태그 제조업체의 요구 사항을 충족하도록 맞춤화되었습니다.
 
 LibDriver NTAG21X는 LibDriver에서 출시한 NTAG21X의 전체 기능 드라이버입니다. 페이지 읽기, 페이지 쓰기 등의 기능을 제공합니다. LibDriver는 MISRA를 준수합니다.
+
+이 리포지토리에는 하위 모듈이 포함되어 있으며 전체 프로젝트를 복제하려면 "--recursive"를 추가해야 합니다.
+
+```shell
+git clone https://github.com/hepingood/ntag21x.git --recursive
+```
 
 ### 콘텐츠
 
@@ -38,6 +44,8 @@ LibDriver NTAG21X는 LibDriver에서 출시한 NTAG21X의 전체 기능 드라�
 /datasheet 디렉토리에는 NTAG21X데이터시트가 있습니다.
 
 /project 디렉토리에는 일반적으로 사용되는 Linux 및 마이크로컨트롤러 개발 보드의 프로젝트 샘플이 포함되어 있습니다. 모든 프로젝트는 디버깅 방법으로 셸 스크립트를 사용하며, 자세한 내용은 각 프로젝트의 README.md를 참조하십시오.
+
+/misra 에는 LibDriver misra 코드 검색 결과가 포함됩니다.
 
 ### 설치
 
@@ -259,13 +267,13 @@ return 0;
 
 ### 문서
 
-온라인 문서: https://www.libdriver.com/docs/ntag21x/index.html
+온라인 문서: [https://www.libdriver.com/docs/ntag21x/index.html](https://www.libdriver.com/docs/ntag21x/index.html).
 
-오프라인 문서: /doc/html/index.html
+오프라인 문서: /doc/html/index.html.
 
 ### 기고
 
-연락주세요lishifenging@outlook.com
+CONTRIBUTING.md 를 참조하십시오.
 
 ### 저작권
 
@@ -281,4 +289,4 @@ MIT 라이선스(MIT)
 
 ### 문의하기
 
-연락주세요lishifenging@outlook.com
+연락주세요lishifenging@outlook.com.
