@@ -12,6 +12,12 @@ NTAG 213, NTAG 215 und NTAG 216 wurden von NXP® Semiconductors als Standard-NFC
 
 LibDriver NTAG21X ist der voll funktionsfähige Treiber von NTAG21X, der von LibDriver gestartet wurde. Er bietet die Funktion zum Lesen von Seiten, Schreiben von Seiten usw. LibDriver ist MISRA-konform.
 
+Dieses Repository enthält ein Submodul und Sie sollten "--recursive" hinzufügen, um das gesamte Projekt zu klonen.
+
+```shell
+git clone https://github.com/hepingood/ntag21x.git --recursive
+```
+
 ### Inhaltsverzeichnis
 
   - [Anweisung](#Anweisung)
@@ -38,6 +44,8 @@ LibDriver NTAG21X ist der voll funktionsfähige Treiber von NTAG21X, der von Lib
 /Datenblatt enthält NTAG21X-Datenblatt.
 
 /project enthält den allgemeinen Beispielcode für Linux- und MCU-Entwicklungsboards. Alle Projekte verwenden das Shell-Skript, um den Treiber zu debuggen, und die detaillierten Anweisungen finden Sie in der README.md jedes Projekts.
+
+/misra enthält die Ergebnisse des LibDriver MISRA Code Scans.
 
 ### Installieren
 
@@ -259,13 +267,13 @@ return 0;
 
 ### Dokument
 
-Online-Dokumente: https://www.libdriver.com/docs/ntag21x/index.html
+Online-Dokumente: [https://www.libdriver.com/docs/ntag21x/index.html](https://www.libdriver.com/docs/ntag21x/index.html).
 
-Offline-Dokumente: /doc/html/index.html
+Offline-Dokumente: /doc/html/index.html.
 
 ### Beitrag
 
-Bitte senden Sie eine E-Mail an lishifenging@outlook.com
+Bitte beachten Sie CONTRIBUTING.md.
 
 ### Lizenz
 
@@ -313,4 +321,4 @@ SOFTWARE.
 
 ### Kontaktieren Sie uns
 
-Bitte senden Sie eine E-Mail an lishifenging@outlook.com
+Bitte senden Sie eine E-Mail an lishifenging@outlook.com.

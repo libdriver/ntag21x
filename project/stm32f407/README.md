@@ -2,87 +2,181 @@
 
 #### 1.1 Chip Info
 
-chip name : STM32F407ZGT6.
+Chip Name: STM32F407ZGT6.
 
-extern oscillator : 8MHz.
+Extern Oscillator: 8MHz.
 
-uart pin: TX/RX PA9/PA10.
+UART Pin: TX/RX PA9/PA10.
 
-iic pin: SCL/SDA PB8/PB9.
+IIC Pin: SCL/SDA PB8/PB9.
 
-spi pin: SCK/MISO/MOSI/CS  PA5/PA6/PA7/PA4.
+SPI Pin: SCK/MISO/MOSI/CS  PA5/PA6/PA7/PA4.
 
-gpio pin: INT PB0.
+GPIO Pin: INT PB0.
 
-reset pin: RESET PA8.
+RESET Pin: RESET PA8.
 
-### 2. Shell
+### 2. Development and Debugging
 
-#### 2.1 Shell Parameter
+#### 2.1 Integrated Development Environment
 
-baud rate: 115200.
+LidDriver provides both Keil and IAR integrated development environment projects.
 
-data bits : 8.
+MDK is the Keil ARM project and your Keil version must be 5 or higher.Keil ARM project needs STMicroelectronics STM32F4 Series Device Family Pack and you can download from https://www.keil.com/dd2/stmicroelectronics/stm32f407zgtx.
 
-stop bits: 1.
+EW is the IAR ARM project and your IAR version must be 9 or higher.
 
-parity: none.
+#### 2.2 Serial Port Parameter
 
-flow control: none.
+Baud Rate: 115200.
+
+Data Bits : 8.
+
+Stop Bits: 1.
+
+Parity: None.
+
+Flow Control: None.
+
+#### 2.3 Serial Port Assistant
+
+We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g. the displayed content does not divide lines), please modify the configuration of your serial port assistant or replace one that supports '\n' parsing.
 
 ### 3. NTAG21X
 
 #### 3.1 Command Instruction
 
-​           ntag21x is a basic command which can test all ntag21x driver function:
+1. Show ntag21x chip and driver information.
 
-​           -i          show ntag21x chip and driver information.
+   ```shell
+   ntag21x (-i | --information)
+   ```
 
-​           -h        show ntag21x help.
+2. Show ntag21x help.
 
-​           -p        show ntag21x pin connections of the current board.
+   ```shell
+   ntag21x (-h | --help)
+   ```
 
-​           -t card        run ntag21x card test. 
+3. Show ntag21x pin connections of the current board.
 
-​           -c (halt | wake_up | read <page> | read_pages <startpage> <stoppage> | read4 <startpage> | write <page> | version | counter | signature | serial_number | set (-pwd <pwd> <pack> | -dynamic <lock> | -static <lock> | -mirror <mirror> <byte> <page> | -mode <mode> | -protect <page> | -limitation <limit> | -access <access> <enable>) | authenticate <pwd> <pack>)
+   ```shell
+   ntag21x (-p | --port)
+   ```
 
-​           -c halt        chip halt.
+4. Run ntag21x card test.
 
-​           -c wake_up        chip wake up.
+   ```shell
+   ntag21x (-t card | --test=card)
+   ```
 
-​           -c read <page>        chip read page.page is the read page.
+5. Run chip halt function.
 
-​           -c read_pages <startpage> <stoppage>        chip read pages.startpage is the start page,stoppage is the stop page.
+   ```shell
+   ntag21x (-e halt | --example=halt)
+   ```
 
-​           -c read4 <startpage>        chip read four pages.startpage is the start page.
+6. Run chip wake up function.
 
-​           -c write <page>        chip write page.page is the written page.
+   ```shell
+   ntag21x (-e wake-up | --example=wake-up)
+   ```
 
-​           -c version        get the version.
+7. Run chip read page function, addr is the read page address.
 
-​           -c counter        get the chip read counter.
+   ```shell
+   ntag21x (-e read | --example=read) [--page=<addr>]
+   ```
 
-​           -c signature        get the chip signature.
+8. Run chip read pages function, taddr is the start page address, paddr is the stop page address.
 
-​           -c serial_number        get the chip serial number.
+   ```shell
+   ntag21x (-e read-pages | --example=read-pages) [--start=<taddr>] [--stop=<paddr>]
+   ```
 
-​           -c set -pwd <pwd> <pack>        set the password.pwd is the password,pack is the checked pack.
+9. Run chip read four pages function, addr is the start page address.
 
-​           -c set -dynamic <lock>        set the dynamic lock.lock is the set lock.
+   ```shell
+   ntag21x (-e read4 | --example=read4) [--page=<addr>]
+   ```
 
-​           -c set -static <lock>        set the static lock.lock is the set lock.
+10. Run chip write page function, addr is the write page address, hex is the write data.
 
-​           -c set -mirror <mirror> <byte> <page>        set the chip mirror.mirror is the type and it can be "NO_ASCII", "UID_ASCII", "NFC_COUNTER_ASCII" or "UID_NFC_COUNTER_ASCII".byte is the page byte and it can be 0, 1, 2, 3.page the mirror page.
+    ```shell
+    ntag21x (-e write | --example=write) [--page=<addr>] [--data=<hex>]
+    ```
 
-​           -c set -mode <mode>        set the mode.mode can be "NORMAL" or "STRONG".
+11. Run get version function.
 
-​           -c set -protect <page>        set the start protect page.page is the start page.
+    ```shell
+    ntag21x (-e version | --example=version)
+    ```
 
-​           -c set -limitation <limit>        set the authenticate limitation.limit is the set limit and it can be 0 - 7.
+12. Run get chip read counter function.
 
-​           -c set -access <access> <enable>        set the access.access can be "READ_PROTECTION", "USER_CONF_PROTECTION", "NFC_COUNTER" or "NFC_COUNTER_PASSWORD_PROTECTION".enable is the set bool and it can be 0 or 1.
+    ```shell
+    ntag21x (-e counter | --example=counter) [--addr=<0 | 1 | 2>]
+    ```
 
-​           -c authenticate <pwd> <pack>        password authenticate .pwd is the password,pack is the checked pack.
+13. Run get chip signature function.
+
+    ```shell
+    ntag21x (-e signature | --example=signature)
+    ```
+
+14. Run get chip serial number function.
+
+    ```shell
+    ntag21x (-e serial | --example=serial)
+    ```
+
+15. Run set password function, password is the password, pak is the checked pack.
+
+    ```shell
+    ntag21x (-e set-pwd | --example=set-pwd) [--pwd=<password>] [--pack=<pak>]
+    ```
+
+16. Run set dynamic lock function, hex is the set lock.
+
+    ```shell
+    ntag21x (-e lock | --example=lock) [--lock-type=<DYNAMIC | STATIC>] [--lock=<hex>]
+    ```
+
+17. Run set chip mirror function, addr is the mirror page address.
+
+    ```shell
+    ntag21x (-e mirror | --example=mirror) [--mirror-type=<NO_ASCII | UID_ASCII | NFC_COUNTER_ASCII | UID_NFC_COUNTER_ASCII>] [--mirror-byte=<0 | 1 | 2 | 3>] [--mirror-page=<addr>]
+    ```
+
+18. Run set mode function.
+
+    ```shell
+    ntag21x (-e set-mode | --example=set-mode) [--mode=<NORMAL | STRONG>]
+    ```
+
+19. Run set start protect page function, addr is the start page address.
+
+    ```shell
+    ntag21x (-e set-protect | --example=set-protect) [--page=<addr>]
+    ```
+
+20. Run set authenticate limitation function.
+
+    ```shell
+    ntag21x (-e set-limit | --example=set-limit) [--limit=<0 | 1 | 2 | 3 | 4 | 5 | 6 | 7>]
+    ```
+
+21. Run set access function.
+
+    ```shell
+    ntag21x (-e set-access | --example=set-access) [--access=<READ_PROTECTION | USER_CONF_PROTECTION | NFC_COUNTER | NFC_COUNTER_PASSWORD_PROTECTION>] [--enable=<true | false>]
+    ```
+
+22. Run password authenticate function, password is the password, pak is the checked pack.
+
+    ```shell
+    ntag21x (-e authenticate | --example=authenticate) [--pwd=<password>] [--pack=<pak>]
+    ```
 
 #### 3.2 Command Example
 
@@ -128,31 +222,18 @@ ntag21x: max current is 30.00mA.
 ntag21x: max temperature is 70.0C.
 ntag21x: min temperature is -25.0C.
 ntag21x: start card test.
-ntag21x: contactless transceiver failed.
-ntag21x: wake up failed.
-ntag21x: run failed.
-ntag21x: chip is NXP NTAG213/5/6.
-ntag21x: manufacturer is NXP.
-ntag21x: interface is RF.
-ntag21x: driver version is 1.0.
-ntag21x: min supply voltage is 3.3V.
-ntag21x: max supply voltage is 4.0V.
-ntag21x: max current is 30.00mA.
-ntag21x: max temperature is 70.0C.
-ntag21x: min temperature is -25.0C.
-ntag21x: start card test.
 ntag21x: find ntag213/5/6 card.
-ntag21x: id1 is 0x88 0x04 0x66 0x67.
-ntag21x: id2 is 0x9A 0x90 0x6B 0x81.
-ntag21x: get capability container ntag216.
-ntag21x: serial number is 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: signature is 0x54 0x75 0x89 0xC5 0x53 0x88 0x36 0xAA 0x10 0xAB 0x79 0x5D 0x52 0x23 0x4D 0x42 0x74 0x79 0x96 0xB2 0x51 0xA5 0x92 0xE9 0x86 0xE4 0x5D 0xCA 0xD7 0x46 0x0A 0x38 
+ntag21x: id1 is 0x88 0x04 0xFA 0x66.
+ntag21x: id2 is 0x12 0x28 0x73 0x80.
+ntag21x: get capability container ntag213.
+ntag21x: serial number is 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
+ntag21x: signature is 0x67 0x97 0x25 0xAD 0x10 0x71 0x46 0xA0 0x7A 0xE1 0x15 0xEB 0xE5 0x27 0x8D 0x2F 0x75 0x26 0x30 0xBF 0xD1 0xF1 0xB3 0x0E 0xAC 0xCD 0xE0 0xDF 0xAA 0xD9 0x19 0xF0 
 ntag21x: read four pages from page 0.
-0x04 0x66 0x67 0x8D 0x9A 0x90 0x6B 0x81 0xE0 0x48 0x00 0x00 0xE1 0x10 0x6D 0x00 
+0x04 0xFA 0x66 0x10 0x12 0x28 0x73 0x80 0xC9 0x48 0x00 0x00 0xE1 0x10 0x12 0x00 
 ntag21x: read page 3.
-0xE1 0x10 0x6D 0x00 
+0xE1 0x10 0x12 0x00 
 ntag21x: fast read page from page 0 - page 5.
-0x04 0x66 0x67 0x8D 0x9A 0x90 0x6B 0x81 0xE0 0x48 0x00 0x00 0xE1 0x10 0x6D 0x00 0x03 0x00 0xFE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+0x04 0xFA 0x66 0x10 0x12 0x28 0x73 0x80 0xC9 0x48 0x00 0x00 0xE1 0x10 0x12 0x00 0x01 0x03 0xA0 0x0C 0x34 0x03 0x00 0xFE 0x0B 0x00 0x08 0x00 0x00 0x00 0x00 0xA7 
 ntag21x: compatibility write page 16.
 ntag21x: check page ok.
 ntag21x: write page 17.
@@ -164,7 +245,7 @@ ntag21x: product_type is 0x04
 ntag21x: product_subtype is 0x02
 ntag21x: major_product_version is 0x01
 ntag21x: minor_product_version is 0x00
-ntag21x: storage_size is 0x13
+ntag21x: storage_size is 0x0F
 ntag21x: protocol_type is 0x03
 ntag21x: set dynamic lock 0x00 0x00 0x00
 ntag21x: get dynamic lock 0x00 0x00 0x00
@@ -204,165 +285,160 @@ ntag21x: nfc counter password protection enable.
 ntag21x: check nfc counter password protection ok.
 ntag21x: set authenticate limitation 7.
 ntag21x: check authenticate limitation ok.
-ntag21x: read counter 2.
+ntag21x: read counter 23.
 ntag21x: finish card test.
 ```
 
 ```shell
-ntag21x -c halt
+ntag21x -e halt
 
 ntag21x: halt.
 ```
 
 ```shell
-ntag21x -c wake_up
+ntag21x -e wake-up
 
 ntag21x: wake up.
 ```
 
 ```shell
-ntag21x -c read 0
+ntag21x -e read --page=0
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: read page 0: 0x04 0x66 0x67 0x8D 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
+ntag21x: read page 0: 0x04 0xFA 0x66 0x10 
 ```
 
 ```shell
-ntag21x -c read_pages 0 3
+ntag21x -e read-pages --start=0 --stop=3
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: read pages 0 - 3: 0x04 0x66 0x67 0x8D 0x9A 0x90 0x6B 0x81 0xE0 0x48 0x00 0x00 0xE1 0x10 0x6D 0x00 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
+ntag21x: read pages 0 - 3: 0x04 0xFA 0x66 0x10 0x12 0x28 0x73 0x80 0xC9 0x48 0x00 0x00 0xE1 0x10 0x12 0x00 
 ```
 
 ```shell
-ntag21x -c read4 0
+ntag21x -e read4 --page=0
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: read page 0: 0x04 0x66 0x67 0x8D 0x9A 0x90 0x6B 0x81 0xE0 0x48 0x00 0x00 0xE1 0x10 0x6D 0x00 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
+ntag21x: read page 0: 0x04 0xFA 0x66 0x10 0x12 0x28 0x73 0x80 0xC9 0x48 0x00 0x00 0xE1 0x10 0x12 0x00 
 ```
 
 ```shell
-ntag21x -c write 20 12345678 
+ntag21x -e write --page=20 --data=12345678
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ntag21x: write page 20: 0x12 0x34 0x56 0x78 
 ```
 
 ```shell
-ntag21x -c version
+ntag21x -e version
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ntag21x: fixed_header is 0x00
 ntag21x: vendor_id is 0x04
 ntag21x: product_type is 0x04
 ntag21x: product_subtype is 0x02
 ntag21x: major_product_version is 0x01
 ntag21x: minor_product_version is 0x00
-ntag21x: storage_size is 0x13
+ntag21x: storage_size is 0x0F
 ntag21x: protocol_type is 0x03
 ```
 
 ```shell
-ntag21x -c counter
+ntag21x -e counter
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-read counter 5.
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
+read counter 29 with addr 0.
 ```
 
 ```shell
-ntag21x -c signature
+ntag21x -e signature
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: signature is 0x54 0x75 0x89 0xC5 0x53 0x88 0x36 0xAA 0x10 0xAB 0x79 0x5D 0x52 0x23 0x4D 0x42 0x74 0x79 0x96 0xB2 0x51 0xA5 0x92 0xE9 0x86 0xE4 0x5D 0xCA 0xD7 0x46 0x0A 0x38 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
+ntag21x: signature is 0x67 0x97 0x25 0xAD 0x10 0x71 0x46 0xA0 0x7A 0xE1 0x15 0xEB 0xE5 0x27 0x8D 0x2F 0x75 0x26 0x30 0xBF 0xD1 0xF1 0xB3 0x0E 0xAC 0xCD 0xE0 0xDF 0xAA 0xD9 0x19 0xF0 
 ```
 
 ```shell
-ntag21x -c serial_number
+ntag21x -e serial
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: serial number is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
+ntag21x: serial number is 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ```
 
 ```shell
-ntag21x -c set -pwd FFFFFFFF 0000
+ntag21x -e set-pwd --pwd=0xFFFFFFFF --pack=0x0000
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ntag21x: set password 0xFF 0xFF 0xFF 0xFF ok.
 ntag21x: set pack 0x00 0x00 ok.
 ```
 
 ```shell
-ntag21x -c set -dynamic 000000
+ntag21x -e lock --lock-type=DYNAMIC --lock=0x000000
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ntag21x: dynamic lock: 0x00 0x00 0x00 
 ```
 
 ```shell
-ntag21x -c set -static 0000
+ntag21x -e lock --lock-type=STATIC --lock=0x0000
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ntag21x: static lock: 0x00 0x00 
 ```
 
 ```shell
-ntag21x -c set -mirror NO_ASCII 0 0
+ntag21x -e mirror --mirror-type=NO_ASCII --mirror-byte=0 --mirror-page=0
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: set no ascii mirror.
-ntag21x: set mirror byte 0.
-ntag21x: set mirror page 0.
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ```
 
 ```shell
-ntag21x -c set -mode STRONG
+ntag21x -e set-mode --mode=STRONG
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: set the strong mode.
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ```
 
 ```shell
-ntag21x -c set -protect 255
+ntag21x -e set-protect --page=255
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ntag21x: set protect start page 255.
 ```
 
 ```shell
-ntag21x -c set -limitation 7
+ntag21x -e set-limit --limit=7
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ntag21x: set authenticate limitation 7.
 ```
 
 ```shell
-ntag21x -c set -access NFC_COUNTER 1
+ntag21x -e set-access --access=NFC_COUNTER --enable=true
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
-ntag21x: set access nfc counter protection true.
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ```
 
 ```shell
-ntag21x -c authenticate FFFFFFFF 0000
+ntag21x -e authenticate --pwd=0xFFFFFFFF --pack=0x0000
 
-ntag21x: find ntag216 card.
-ntag21x: id is 0x88 0x04 0x66 0x67 0x9A 0x90 0x6B 0x81 
+ntag21x: find ntag213 card.
+ntag21x: id is 0x88 0x04 0xFA 0x66 0x12 0x28 0x73 0x80 
 ntag21x: authenticate password 0xFF 0xFF 0xFF 0xFF ok.
 ntag21x: authenticate pack 0x00 0x00 ok.
 ```
@@ -371,50 +447,63 @@ ntag21x: authenticate pack 0x00 0x00 ok.
 ```shell
 ntag21x -h
 
-ntag21x -i
-	show ntag21x chip and driver information.
-ntag21x -h
-	show ntag21x help.
-ntag21x -p
-	show ntag21x pin connections of the current board.
-ntag21x -t card
-	run ntag21x card test.
-ntag21x -c halt
-	chip halt.
-ntag21x -c wake_up
-	chip wake up.
-ntag21x -c read <page>
-	chip read page.page is the read page.
-ntag21x -c read_pages <startpage> <stoppage>
-	chip read pages.startpage is the start page,stoppage is the stop page.
-ntag21x -c read4 <startpage>
-	chip read four pages.startpage is the start page.
-ntag21x -c write <page>
-	chip write page.page is the written page.
-ntag21x -c version
-	get the version.
-ntag21x -c counter
-	get the chip read counter.
-ntag21x -c signature
-	get the chip signature.
-ntag21x -c serial_number
-	get the chip serial number.
-ntag21x -c set -pwd <pwd> <pack>
-	set the password.pwd is the password,pack is the checked pack.
-ntag21x -c set -dynamic <lock>
-	set the dynamic lock.lock is the set lock.
-ntag21x -c set -static <lock>
-	set the static lock.lock is the set lock.
-ntag21x -c set -mirror <mirror> <byte> <page>
-	set the chip mirror.mirror is the type and it can be "NO_ASCII", "UID_ASCII", "NFC_COUNTER_ASCII" or "UID_NFC_COUNTER_ASCII".byte is the page byte and it can be 0, 1, 2, 3.page the mirror page.
-ntag21x -c set -mode <mode>
-	set the mode.mode can be "NORMAL" or "STRONG".
-ntag21x -c set -protect <page>
-	set the start protect page.page is the start page.
-ntag21x -c set -limitation <limit>
-	set the authenticate limitation.limit is the set limit and it can be 0 - 7.
-ntag21x -c set -access <access> <enable>
-	set the access.access can be "READ_PROTECTION", "USER_CONF_PROTECTION","NFC_COUNTER" or "NFC_COUNTER_PASSWORD_PROTECTION".enable is the set bool and it can be 0 or 1.
-ntag21x -c authenticate <pwd> <pack>
-	password authenticate .pwd is the password,pack is the checked pack.
+Usage:
+  ntag21x (-i | --information)
+  ntag21x (-h | --help)
+  ntag21x (-p | --port)
+  ntag21x (-t card | --test=card)
+  ntag21x (-e halt | --example=halt)
+  ntag21x (-e wake-up | --example=wake-up)
+  ntag21x (-e read | --example=read) [--page=<addr>]
+  ntag21x (-e read-pages | --example=read-pages) [--start=<taddr>] [--stop=<paddr>]
+  ntag21x (-e read4 | --example=read4) [--page=<addr>]
+  ntag21x (-e write | --example=write) [--page=<addr>] [--data=<hex>]
+  ntag21x (-e version | --example=version)
+  ntag21x (-e counter | --example=counter) [--addr=<0 | 1 | 2>]
+  ntag21x (-e signature | --example=signature)
+  ntag21x (-e serial | --example=serial)
+  ntag21x (-e set-pwd | --example=set-pwd) [--pwd=<password>] [--pack=<pak>]
+  ntag21x (-e lock | --example=lock) [--lock-type=<DYNAMIC | STATIC>] [--lock=<hex>]
+  ntag21x (-e mirror | --example=mirror)
+          [--mirror-type=<NO_ASCII | UID_ASCII | NFC_COUNTER_ASCII | UID_NFC_COUNTER_ASCII>]
+          [--mirror-byte=<0 | 1 | 2 | 3>] [--mirror-page=<addr>]
+  ntag21x (-e set-mode | --example=set-mode) [--mode=<NORMAL | STRONG>]
+  ntag21x (-e set-protect | --example=set-protect) [--page=<addr>]
+  ntag21x (-e set-limit | --example=set-limit) [--limit=<0 | 1 | 2 | 3 | 4 | 5 | 6 | 7>]
+  ntag21x (-e set-access | --example=set-access)
+          [--access=<READ_PROTECTION | USER_CONF_PROTECTION | NFC_COUNTER | NFC_COUNTER_PASSWORD_PROTECTION>]
+          [--enable=<true | false>]
+  ntag21x (-e authenticate | --example=authenticate) [--pwd=<password>] [--pack=<pak>]
+
+Options:
+      --access=<READ_PROTECTION | USER_CONF_PROTECTION | NFC_COUNTER | NFC_COUNTER_PASSWORD_PROTECTION>
+                                 Set access mode.([default: READ_PROTECTION])
+      --addr=<0 | 1 | 2>         Set counter address.([default: 0])
+      --data=<hex>               Set opt write data and it is hexadecimal.([default: 0x00000000])
+  -e <halt | wake-up | read | read-pages | read4 | write | version | counter | signature | serial | set-pwd
+     | lock | mirror | set-mode | set-protect | set-limit | set-access | authenticate>, --example=<halt
+     | wake-up | read | read-pages | read4 | write | version | counter | signature | serial | set-pwd
+     | lock | mirror | set-mode | set-protect | set-limit | set-access | authenticate>
+                                 Run the driver example.
+      --enable=<true | false>    Set access bool.([default: false])
+  -h, --help                     Show the help.
+  -i, --information              Show the chip information.
+      --mirror-byte=<0 | 1 | 2 | 3>
+                                 Set the mirror byte.([default: 0])
+      --mirror-type=<NO_ASCII | UID_ASCII | NFC_COUNTER_ASCII | UID_NFC_COUNTER_ASCII>
+                                 Set the mirror type.([default: NO_ASCII])
+      --mirror-page=<addr>       Set the mirror page.([default: 0])
+      --mode=<NORMAL | STRONG>   Set chip mode.([default: STRONG])
+      --limit=<0 | 1 | 2 | 3 | 4 | 5 | 6 | 7>
+                                 Set the limit times.([default: 7])
+      --lock=<hex>               Set the lock data.([default: 0x0000000000])
+      --lock-type=<DYNAMIC | STATIC>
+                                 Set the lock type.([default: DYNAMIC])
+  -p, --port                     Display the pin connections of the current board.
+      --pack=<pak>               Set the pack authentication and it is hexadecimal.([default: 0x0000])
+      --page=<addr>              Set read or write page address.([default: 10])
+      --pwd=<password>           Set the password authentication and it is hexadecimal.([default: 0xFFFFFFFF])
+      --start=<taddr>            Set read pages start address.([default: 0])
+      --stop=<paddr>             Set read pages stop address.([default: 3])
+  -t <card>, --test=<card>       Run the driver test.
 ```

@@ -12,6 +12,12 @@ NTAG 213、NTAG 215、およびNTAG 216は、NXP®Semiconductorsによって、�
 
 LibDriver NTAG21Xは、LibDriverによって起動されたNTAG21Xの全機能ドライバーであり、ページの読み取り、ページの書き込みなどの機能を提供します。 LibDriverはMISRAに準拠しています。
 
+このリポジトリにはサブモジュールが含まれており、「--recursive」を追加してプロジェクト全体を複製する必要があります。
+
+```shell
+git clone https://github.com/hepingood/ntag21x.git --recursive
+```
+
 ### 目次
 
   - [説明](#説明)
@@ -38,6 +44,8 @@ LibDriver NTAG21Xは、LibDriverによって起動されたNTAG21Xの全機能�
 / datasheetディレクトリには、NTAG21Xデータシートが含まれています。
 
 / projectディレクトリには、一般的に使用されるLinuxおよびマイクロコントローラー開発ボードのプロジェクトサンプルが含まれています。 すべてのプロジェクトは、デバッグ方法としてシェルスクリプトを使用しています。詳細については、各プロジェクトのREADME.mdを参照してください。
+
+/ misraはLibDriver misraコードスキャン結果を含む。
 
 ### インストール
 
@@ -259,13 +267,13 @@ return 0;
 
 ### ドキュメント
 
-オンラインドキュメント: https://www.libdriver.com/docs/ntag21x/index.html
+オンラインドキュメント: [https://www.libdriver.com/docs/ntag21x/index.html](https://www.libdriver.com/docs/ntag21x/index.html)。
 
-オフラインドキュメント: /doc/html/index.html
+オフラインドキュメント: /doc/html/index.html。
 
 ### 貢献
 
-お問い合わせくださいlishifenging@outlook.com
+CONTRIBUTING.mdを参照してください。
 
 ### 著作権
 
@@ -281,4 +289,4 @@ MITライセンス（MIT）
 
 ### 連絡して
 
-お問い合わせくださいlishifenging@outlook.com
+お問い合わせくださいlishifenging@outlook.com。

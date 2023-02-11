@@ -12,6 +12,12 @@ NTAG213、NTAG215和NTAG216由恩智浦半导体公司开发，并作为标准NF
 
 LibDriver NTAG21X是LibDriver推出的NTAG21X全功能驱动，该驱动提供页读取，页写入等功能并且它符合MISRA标准。
 
+本仓库包含子模块，您需要增加“--recursive”选项完整克隆整个工程。
+
+```shell
+git clone https://github.com/hepingood/ntag21x.git --recursive
+```
+
 ### 目录
 
   - [说明](#说明)
@@ -38,6 +44,8 @@ LibDriver NTAG21X是LibDriver推出的NTAG21X全功能驱动，该驱动提供�
 /datasheet目录包含了NTAG21X数据手册。
 
 /project目录包含了常用Linux与单片机开发板的工程样例。所有工程均采用shell脚本作为调试方法，详细内容可参考每个工程里面的README.md。
+
+/misra目录包含了LibDriver MISRA代码扫描结果。
 
 ### 安装
 
@@ -259,13 +267,13 @@ return 0;
 
 ### 文档
 
-在线文档: https://www.libdriver.com/docs/ntag21x/index.html
+在线文档: [https://www.libdriver.com/docs/ntag21x/index.html](https://www.libdriver.com/docs/ntag21x/index.html)。
 
-离线文档: /doc/html/index.html
+离线文档: /doc/html/index.html。
 
 ### 贡献
 
-请联系lishifenging@outlook.com
+请参考CONTRIBUTING.md。
 
 ### 版权
 
@@ -281,4 +289,4 @@ MIT 许可证（MIT）
 
 ### 联系我们
 
-请联系lishifenging@outlook.com
+请联系lishifenging@outlook.com。

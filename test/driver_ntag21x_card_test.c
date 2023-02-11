@@ -136,11 +136,11 @@ uint8_t ntag21x_card_test(void)
         return 1;
     }
     
-    /* anticollision cl1 */
+    /* anti collision cl1 */
     res = ntag21x_anticollision_cl1(&gs_handle, id);
     if (res != 0)
     {
-        ntag21x_interface_debug_print("ntag21x: anticollision cl1 failed.\n");
+        ntag21x_interface_debug_print("ntag21x: anti collision cl1 failed.\n");
         (void)ntag21x_deinit(&gs_handle);
         
         return 1;
@@ -157,21 +157,21 @@ uint8_t ntag21x_card_test(void)
     }
     ntag21x_interface_debug_print("ntag21x: id1 is 0x%02X 0x%02X 0x%02X 0x%02X.\n", id[0], id[1], id[2], id[3]);
     
-    /* anticollision cl2 */
+    /* anti collision cl2 */
     res = ntag21x_anticollision_cl2(&gs_handle, id);
     if (res != 0)
     {
-        ntag21x_interface_debug_print("ntag21x: anticollision cl2 failed.\n");
+        ntag21x_interface_debug_print("ntag21x: anti collision cl2 failed.\n");
         (void)ntag21x_deinit(&gs_handle);
         
         return 1;
     }
     
-    /* anticollision cl2 */
+    /* anti collision cl2 */
     res = ntag21x_anticollision_cl2(&gs_handle, id);
     if (res != 0)
     {
-        ntag21x_interface_debug_print("ntag21x: anticollision cl2 failed.\n");
+        ntag21x_interface_debug_print("ntag21x: anti collision cl2 failed.\n");
         (void)ntag21x_deinit(&gs_handle);
         
         return 1;

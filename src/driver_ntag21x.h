@@ -186,7 +186,7 @@ typedef struct ntag21x_info_s
 
 /**
  * @brief     initialize ntag21x_handle_t structure
- * @param[in] HANDLE points to a ntag21x handle structure
+ * @param[in] HANDLE points to an ntag21x handle structure
  * @param[in] STRUCTURE is ntag21x_handle_t
  * @note      none
  */
@@ -194,7 +194,7 @@ typedef struct ntag21x_info_s
 
 /**
  * @brief     link contactless_init function
- * @param[in] HANDLE points to a ntag21x handle structure
+ * @param[in] HANDLE points to an ntag21x handle structure
  * @param[in] FUC points to a contactless_init function address
  * @note      none
  */
@@ -202,7 +202,7 @@ typedef struct ntag21x_info_s
 
 /**
  * @brief     link contactless_deinit function
- * @param[in] HANDLE points to a ntag21x handle structure
+ * @param[in] HANDLE points to an ntag21x handle structure
  * @param[in] FUC points to a contactless_deinit function address
  * @note      none
  */
@@ -210,7 +210,7 @@ typedef struct ntag21x_info_s
 
 /**
  * @brief     link contactless_transceiver function
- * @param[in] HANDLE points to a ntag21x handle structure
+ * @param[in] HANDLE points to an ntag21x handle structure
  * @param[in] FUC points to a contactless_transceiver function address
  * @note      none
  */
@@ -218,7 +218,7 @@ typedef struct ntag21x_info_s
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a ntag21x handle structure
+ * @param[in] HANDLE points to an ntag21x handle structure
  * @param[in] FUC points to a delay_ms function address
  * @note      none
  */
@@ -226,7 +226,7 @@ typedef struct ntag21x_info_s
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a ntag21x handle structure
+ * @param[in] HANDLE points to an ntag21x handle structure
  * @param[in] FUC points to a debug_print function address
  * @note      none
  */
@@ -245,7 +245,7 @@ typedef struct ntag21x_info_s
 
 /**
  * @brief      get chip information
- * @param[out] *info points to a ntag21x info structure
+ * @param[out] *info points to an ntag21x info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -255,7 +255,7 @@ uint8_t ntag21x_info(ntag21x_info_t *info);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 contactless initialization failed
@@ -267,7 +267,7 @@ uint8_t ntag21x_init(ntag21x_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 contactless deinit failed
@@ -279,7 +279,7 @@ uint8_t ntag21x_deinit(ntag21x_handle_t *handle);
 
 /**
  * @brief      ntag21x request
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *type points to a type buffer
  * @return     status code
  *             - 0 success
@@ -294,7 +294,7 @@ uint8_t ntag21x_request(ntag21x_handle_t *handle, ntag21x_type_t *type);
 
 /**
  * @brief      ntag21x wake up
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *type points to a type buffer
  * @return     status code
  *             - 0 success
@@ -308,24 +308,24 @@ uint8_t ntag21x_request(ntag21x_handle_t *handle, ntag21x_type_t *type);
 uint8_t ntag21x_wake_up(ntag21x_handle_t *handle, ntag21x_type_t *type);
 
 /**
- * @brief      ntag21x halt
- * @param[in]  *handle points to a ntag21x handle structure
- * @return     status code
- *             - 0 success
- *             - 1 halt failed
- *             - 2 handle is NULL
- *             - 3 handle is not initialized
- * @note       none
+ * @brief     ntag21x halt
+ * @param[in] *handle points to an ntag21x handle structure
+ * @return    status code
+ *            - 0 success
+ *            - 1 halt failed
+ *            - 2 handle is NULL
+ *            - 3 handle is not initialized
+ * @note      none
  */
 uint8_t ntag21x_halt(ntag21x_handle_t *handle);
 
 /**
- * @brief      ntag21x anticollision cl1
- * @param[in]  *handle points to a ntag21x handle structure
+ * @brief      ntag21x anti collision cl1
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *id points to an id buffer
  * @return     status code
  *             - 0 success
- *             - 1 anticollision cl1 failed
+ *             - 1 anti collision cl1 failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
  *             - 4 output_len is invalid
@@ -335,12 +335,12 @@ uint8_t ntag21x_halt(ntag21x_handle_t *handle);
 uint8_t ntag21x_anticollision_cl1(ntag21x_handle_t *handle, uint8_t id[4]);
 
 /**
- * @brief      ntag21x anticollision cl2
- * @param[in]  *handle points to a ntag21x handle structure
+ * @brief      ntag21x anti collision cl2
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *id points to an id buffer
  * @return     status code
  *             - 0 success
- *             - 1 anticollision cl2 failed
+ *             - 1 anti collision cl2 failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
  *             - 4 output_len is invalid
@@ -351,7 +351,7 @@ uint8_t ntag21x_anticollision_cl2(ntag21x_handle_t *handle, uint8_t id[4]);
 
 /**
  * @brief     ntag21x select cl1
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] *id points to an id buffer
  * @return    status code
  *            - 0 success
@@ -366,7 +366,7 @@ uint8_t ntag21x_select_cl1(ntag21x_handle_t *handle, uint8_t id[4]);
 
 /**
  * @brief     ntag21x select cl2
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] *id points to an id buffer
  * @return    status code
  *            - 0 success
@@ -381,7 +381,7 @@ uint8_t ntag21x_select_cl2(ntag21x_handle_t *handle, uint8_t id[4]);
 
 /**
  * @brief      ntag21x get the version
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *version points to a version structure
  * @return     status code
  *             - 0 success
@@ -396,7 +396,7 @@ uint8_t ntag21x_get_version(ntag21x_handle_t *handle, ntag21x_version_t *version
 
 /**
  * @brief      ntag21x read four pages
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[in]  start_page is the start page of read
  * @param[out] *data points to a data buffer
  * @return     status code
@@ -412,7 +412,7 @@ uint8_t ntag21x_read_four_pages(ntag21x_handle_t *handle, uint8_t start_page, ui
 
 /**
  * @brief      ntag21x read page
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[in]  page is the page of read
  * @param[out] *data points to a data buffer
  * @return     status code
@@ -428,7 +428,7 @@ uint8_t ntag21x_read_page(ntag21x_handle_t *handle, uint8_t page, uint8_t data[4
 
 /**
  * @brief         ntag21x fast read page
- * @param[in]     *handle points to a ntag21x handle structure
+ * @param[in]     *handle points to an ntag21x handle structure
  * @param[in]     start_page is the start page
  * @param[in]     stop_page is the stop page
  * @param[out]    *data points to a data buffer
@@ -450,7 +450,7 @@ uint8_t ntag21x_fast_read_page(ntag21x_handle_t *handle, uint8_t start_page, uin
 
 /**
  * @brief     ntag21x compatibility write page
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] page is the page of write
  * @param[in] *data points to a data buffer
  * @return    status code
@@ -466,7 +466,7 @@ uint8_t ntag21x_compatibility_write_page(ntag21x_handle_t *handle, uint8_t page,
 
 /**
  * @brief     ntag21x write page
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] page is the page of write
  * @param[in] *data points to a data buffer
  * @return    status code
@@ -482,7 +482,7 @@ uint8_t ntag21x_write_page(ntag21x_handle_t *handle, uint8_t page, uint8_t data[
 
 /**
  * @brief      ntag21x read the counter
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *cnt points to a counter buffer
  * @return     status code
  *             - 0 success
@@ -497,7 +497,7 @@ uint8_t ntag21x_read_counter(ntag21x_handle_t *handle, uint32_t *cnt);
 
 /**
  * @brief      ntag21x read the signature
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *signature points to a signature buffer
  * @return     status code
  *             - 0 success
@@ -512,7 +512,7 @@ uint8_t ntag21x_read_signature(ntag21x_handle_t *handle, uint8_t signature[32]);
 
 /**
  * @brief      ntag21x get the serial number
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *number points to a number buffer
  * @return     status code
  *             - 0 success
@@ -527,7 +527,7 @@ uint8_t ntag21x_get_serial_number(ntag21x_handle_t *handle, uint8_t number[7]);
 
 /**
  * @brief      ntag21x get the capability container
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *container points to a capability container buffer
  * @return     status code
  *             - 0 success
@@ -543,7 +543,7 @@ uint8_t ntag21x_get_capability_container(ntag21x_handle_t *handle, ntag21x_capab
 
 /**
  * @brief     ntag21x set the password
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] *pwd points to a password buffer
  * @return    status code
  *            - 0 success
@@ -558,7 +558,7 @@ uint8_t ntag21x_set_password(ntag21x_handle_t *handle, uint8_t pwd[4]);
 
 /**
  * @brief     ntag21x set the pack
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] *pack points to a pack buffer
  * @return    status code
  *            - 0 success
@@ -573,7 +573,7 @@ uint8_t ntag21x_set_pack(ntag21x_handle_t *handle, uint8_t pack[2]);
 
 /**
  * @brief     ntag21x authenticate
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] *pwd points to a pwd buffer
  * @param[in] *pack points to a pack buffer
  * @return    status code
@@ -590,7 +590,7 @@ uint8_t ntag21x_authenticate(ntag21x_handle_t *handle, uint8_t pwd[4], uint8_t p
 
 /**
  * @brief     ntag21x set the dynamic lock
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] *lock points to a lock buffer
  * @return    status code
  *            - 0 success
@@ -634,7 +634,7 @@ uint8_t ntag21x_set_dynamic_lock(ntag21x_handle_t *handle, uint8_t lock[3]);
 
 /**
  * @brief      ntag21x get the dynamic lock
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *lock points to a lock buffer
  * @return     status code
  *             - 0 success
@@ -649,7 +649,7 @@ uint8_t ntag21x_get_dynamic_lock(ntag21x_handle_t *handle, uint8_t lock[3]);
 
 /**
  * @brief     ntag21x set the static lock
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] *lock points to a lock buffer
  * @return    status code
  *            - 0 success
@@ -669,7 +669,7 @@ uint8_t ntag21x_set_static_lock(ntag21x_handle_t *handle, uint8_t lock[2]);
 
 /**
  * @brief      ntag21x get the static lock
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *lock points to a lock buffer
  * @return     status code
  *             - 0 success
@@ -684,7 +684,7 @@ uint8_t ntag21x_get_static_lock(ntag21x_handle_t *handle, uint8_t lock[2]);
 
 /**
  * @brief     ntag21x set the mirror
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] mirror is the chip mirror mode
  * @return    status code
  *            - 0 success
@@ -697,7 +697,7 @@ uint8_t ntag21x_set_mirror(ntag21x_handle_t *handle, ntag21x_mirror_t mirror);
 
 /**
  * @brief      ntag21x get the mirror
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *mirror points to a chip mirror mode buffer
  * @return     status code
  *             - 0 success
@@ -710,7 +710,7 @@ uint8_t ntag21x_get_mirror(ntag21x_handle_t *handle, ntag21x_mirror_t *mirror);
 
 /**
  * @brief     ntag21x set the mirror byte
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] byte is the mirror byte
  * @return    status code
  *            - 0 success
@@ -723,7 +723,7 @@ uint8_t ntag21x_set_mirror_byte(ntag21x_handle_t *handle, ntag21x_mirror_byte_t 
 
 /**
  * @brief      ntag21x get the mirror byte
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *byte points to a mirror byte buffer
  * @return     status code
  *             - 0 success
@@ -736,7 +736,7 @@ uint8_t ntag21x_get_mirror_byte(ntag21x_handle_t *handle, ntag21x_mirror_byte_t 
 
 /**
  * @brief     ntag21x set the modulation mode
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] mode is the modulation mode
  * @return    status code
  *            - 0 success
@@ -749,7 +749,7 @@ uint8_t ntag21x_set_modulation_mode(ntag21x_handle_t *handle, ntag21x_modulation
 
 /**
  * @brief      ntag21x get the modulation mode
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *mode points to a modulation mode buffer
  * @return     status code
  *             - 0 success
@@ -762,7 +762,7 @@ uint8_t ntag21x_get_modulation_mode(ntag21x_handle_t *handle, ntag21x_modulation
 
 /**
  * @brief     ntag21x set the mirror page
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] page is the mirror page
  * @return    status code
  *            - 0 success
@@ -775,7 +775,7 @@ uint8_t ntag21x_set_mirror_page(ntag21x_handle_t *handle, uint8_t page);
 
 /**
  * @brief      ntag21x get the mirror page
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *page points to a mirror page buffer
  * @return     status code
  *             - 0 success
@@ -788,7 +788,7 @@ uint8_t ntag21x_get_mirror_page(ntag21x_handle_t *handle, uint8_t *page);
 
 /**
  * @brief     ntag21x set the start page of protection
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] page is the start page
  * @return    status code
  *            - 0 success
@@ -801,7 +801,7 @@ uint8_t ntag21x_set_protect_start_page(ntag21x_handle_t *handle, uint8_t page);
 
 /**
  * @brief      ntag21x get the start page of protection
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[out] *page points to a start page buffer
  * @return     status code
  *             - 0 success
@@ -814,7 +814,7 @@ uint8_t ntag21x_get_protect_start_page(ntag21x_handle_t *handle, uint8_t *page);
 
 /**
  * @brief     ntag21x enable or disable access
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] access is the set access
  * @param[in] enable is a bool value
  * @return    status code
@@ -828,7 +828,7 @@ uint8_t ntag21x_set_access(ntag21x_handle_t *handle, ntag21x_access_t access, nt
 
 /**
  * @brief      ntag21x get the access status
- * @param[in]  *handle points to a ntag21x handle structure
+ * @param[in]  *handle points to an ntag21x handle structure
  * @param[in]  access is the set access
  * @param[out] *enable points to a bool value buffer
  * @return     status code
@@ -842,7 +842,7 @@ uint8_t ntag21x_get_access(ntag21x_handle_t *handle, ntag21x_access_t access, nt
 
 /**
  * @brief     ntag21x set the authenticate limitation
- * @param[in] *handle points to a ntag21x handle structure
+ * @param[in] *handle points to an ntag21x handle structure
  * @param[in] limit is the authenticate limitation
  * @return    status code
  *            - 0 success
@@ -856,8 +856,8 @@ uint8_t ntag21x_set_authenticate_limitation(ntag21x_handle_t *handle, uint8_t li
 
 /**
  * @brief      ntag21x get the authenticate limitation
- * @param[in]  *handle points to a ntag21x handle structure
- * @param[out] *limit points to a authenticate limitation buffer
+ * @param[in]  *handle points to an ntag21x handle structure
+ * @param[out] *limit points to an authenticate limitation buffer
  * @return     status code
  *             - 0 success
  *             - 1 get authenticate limitation failed
@@ -880,11 +880,11 @@ uint8_t ntag21x_get_authenticate_limitation(ntag21x_handle_t *handle, uint8_t *l
 
 /**
  * @brief         transceiver data
- * @param[in]     *handle points to a ntag21x handle structure
- * @param[in]     *in_buf points to a input buffer
+ * @param[in]     *handle points to an ntag21x handle structure
+ * @param[in]     *in_buf points to an input buffer
  * @param[in]     in_len is the input length
- * @param[out]    *out_buf points to a output buffer
- * @param[in,out] *out_len points to a output length buffer
+ * @param[out]    *out_buf points to an output buffer
+ * @param[in,out] *out_len points to an output length buffer
  * @return        status code
  *                - 0 success
  *                - 1 transceiver failed

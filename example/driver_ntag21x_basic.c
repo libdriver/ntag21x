@@ -171,7 +171,7 @@ uint8_t ntag21x_basic_search(ntag21x_capability_container_t *type, uint8_t id[8]
         res = ntag21x_request(&gs_handle, &t);
         if (res == 0)
         {
-            /* anticollision_cl1 */
+            /* anti collision_cl1 */
             res = ntag21x_anticollision_cl1(&gs_handle, id);
             if (res == 0)
             {
@@ -179,7 +179,7 @@ uint8_t ntag21x_basic_search(ntag21x_capability_container_t *type, uint8_t id[8]
                 res = ntag21x_select_cl1(&gs_handle, id);
                 if (res == 0)
                 {
-                    /* anticollision_cl2 */
+                    /* anti collision_cl2 */
                     res = ntag21x_anticollision_cl2(&gs_handle, id + 4);
                     if (res == 0)
                     {
