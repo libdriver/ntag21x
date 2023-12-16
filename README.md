@@ -15,7 +15,7 @@ LibDriver NTAG21X is the full function driver of NTAG21X launched by LibDriver.I
 This repository includes submodule and you shold add "--recursive" to clone the whole project.
 
 ```shell
-git clone https://github.com/hepingood/ntag21x.git --recursive
+git clone https://github.com/libdriver/ntag21x.git --recursive
 ```
 
 ### Table of Contents

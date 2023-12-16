@@ -15,7 +15,7 @@ LibDriver NTAG21X是LibDriver推出的NTAG21X全功能驱动，该驱动提供�
 本仓库包含子模块，您需要增加“--recursive”选项完整克隆整个工程。
 
 ```shell
-git clone https://github.com/hepingood/ntag21x.git --recursive
+git clone https://github.com/libdriver/ntag21x.git --recursive
 ```
 
 ### 目录

@@ -15,7 +15,7 @@ LibDriver NTAG21Xは、LibDriverによって起動されたNTAG21Xの全機能�
 このリポジトリにはサブモジュールが含まれており、「--recursive」を追加してプロジェクト全体を複製する必要があります。
 
 ```shell
-git clone https://github.com/hepingood/ntag21x.git --recursive
+git clone https://github.com/libdriver/ntag21x.git --recursive
 ```
 
 ### 目次
