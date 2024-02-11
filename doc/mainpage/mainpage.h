@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver NTAG21X
- * @brief     libdriver ntag21x is a full function driver of NTAG21X and it can run in both MCU and Linux platform.
+ * @brief     LibDriver NTAG21X is a full function driver of NTAG21X and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
