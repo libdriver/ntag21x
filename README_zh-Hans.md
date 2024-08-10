@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/ntag21x/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-NTAG213、NTAG215和NTAG216由恩智浦半导体公司开发，并作为标准NFC标签IC与NFC设备或NFC兼容型近距离耦合设备配合，广泛用于大众市场应用，如零售、游戏和消费电子等。NTAG213、NTAG215和NTAG216 (以下统称为NTAG21x)的设计完全符合NFC Forum NFC Forum Type 2标签和ISO/IEC14443 Type A规范。目标应用包括户外和印刷媒体智能广告、SoLoMo应用、产品验证、NFC货架标签、手机配套标签。目标用例包括户外智能广告、产品认证、手机配套标签、Bluetooth®或Wi-Fi配对、电子货架标签和名片。还可对NTAG21x存储器进行分段，以同时部署多个应用。由于NTAG21x标签IC具有高输入电容，因此该产品尤其适用于要求具有小尺寸的应用，而不会降低性能。小型NFC标签可更轻松地嵌入产品标签或电子设备等目标中。NTAG21x的机械和电气规格可满足inlay和标签制造商的要求而量身定制。
+NTAG213、NTAG215和NTAG216由恩智浦半导体公司开发，并作为标准NFC标签IC与NFC设备或NFC兼容型近距离耦合设备配合，广泛用于大众市场应用，如零售、游戏和消费电子等。NTAG213、NTAG215和NTAG216 (以下统称为NTAG21x)的设计完全符合NFC Forum NFC Forum Type 2标签和ISO/IEC14443 Type A规范。目标应用包括户外和印刷媒体智能广告、SoLoMo应用、产品验证、NFC货架标签、手机配套标签。目标用例包括户外智能广告、产品认证、手机配套标签、Bluetooth®或Wi-Fi配对、电子货架标签和名片。还可对NTAG21x存储器进行分段，以同时部署多个应用。由于NTAG21x标签IC具有高输入电容，因此该产品尤其适用于要求具有小尺寸的应用，而不会降低性能。小型NFC标签可更轻松地嵌入产品标签或电子设备等目标中。NTAG21x的机械和电气规格可满足镶嵌要求，并且可以按照标签制造商的要求而量身定制。
 
 LibDriver NTAG21X是LibDriver推出的NTAG21X全功能驱动，该驱动提供页读取，页写入等功能并且它符合MISRA标准。
 
