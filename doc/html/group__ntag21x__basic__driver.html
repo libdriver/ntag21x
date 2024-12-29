@@ -556,8 +556,8 @@ Functions</h2></td></tr>
 <p>ntag21x anti collision cl1 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -605,8 +605,8 @@ Functions</h2></td></tr>
 <p>ntag21x anti collision cl2 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -660,9 +660,9 @@ Functions</h2></td></tr>
 <p>ntag21x authenticate </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>points to a pwd buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>points to a pack buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>pointer to a pwd buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>pointer to a pack buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -717,9 +717,9 @@ Functions</h2></td></tr>
 <p>ntag21x compatibility write page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the page of write </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>page of write </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -757,7 +757,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -821,11 +821,11 @@ Functions</h2></td></tr>
 <p>ntag21x fast read page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>is the start page </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">stop_page</td><td>is the stop page </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">*len</td><td>points to a data length buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>start page </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stop_page</td><td>stop page </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*len</td><td>pointer to a data length buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -882,9 +882,9 @@ Functions</h2></td></tr>
 <p>ntag21x get the access status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>is the set access </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>set access </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -930,8 +930,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the authenticate limitation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*limit</td><td>points to an authenticate limitation buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*limit</td><td>pointer to an authenticate limitation buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -977,8 +977,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the capability container </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*container</td><td>points to a capability container buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*container</td><td>pointer to a capability container buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1027,8 +1027,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the dynamic lock </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*lock</td><td>points to a lock buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*lock</td><td>pointer to a lock buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1076,8 +1076,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the mirror </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mirror</td><td>points to a chip mirror mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mirror</td><td>pointer to a chip mirror mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1123,8 +1123,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the mirror byte </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*byte</td><td>points to a mirror byte buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*byte</td><td>pointer to a mirror byte buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1170,8 +1170,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the mirror page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*page</td><td>points to a mirror page buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*page</td><td>pointer to a mirror page buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1217,8 +1217,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the modulation mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a modulation mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a modulation mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1264,8 +1264,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the start page of protection </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*page</td><td>points to a start page buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*page</td><td>pointer to a start page buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1311,8 +1311,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the serial number </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*number</td><td>points to a number buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*number</td><td>pointer to a number buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1360,8 +1360,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the static lock </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*lock</td><td>points to a lock buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*lock</td><td>pointer to a lock buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1409,8 +1409,8 @@ Functions</h2></td></tr>
 <p>ntag21x get the version </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*version</td><td>points to a version structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*version</td><td>pointer to a version structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1448,7 +1448,7 @@ Functions</h2></td></tr>
 <p>ntag21x halt </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1484,7 +1484,7 @@ Functions</h2></td></tr>
 <p>get chip information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an ntag21x info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an ntag21x info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1518,7 +1518,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1564,8 +1564,8 @@ Functions</h2></td></tr>
 <p>ntag21x read the counter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*cnt</td><td>points to a counter buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*cnt</td><td>pointer to a counter buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1619,9 +1619,9 @@ Functions</h2></td></tr>
 <p>ntag21x read four pages </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>is the start page of read </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>start page of read </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1675,9 +1675,9 @@ Functions</h2></td></tr>
 <p>ntag21x read page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the page of read </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>page of read </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1725,8 +1725,8 @@ Functions</h2></td></tr>
 <p>ntag21x read the signature </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*signature</td><td>points to a signature buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*signature</td><td>pointer to a signature buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1774,8 +1774,8 @@ Functions</h2></td></tr>
 <p>ntag21x request </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>points to a type buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>pointer to a type buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1823,8 +1823,8 @@ Functions</h2></td></tr>
 <p>ntag21x select cl1 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1872,8 +1872,8 @@ Functions</h2></td></tr>
 <p>ntag21x select cl2 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1927,9 +1927,9 @@ Functions</h2></td></tr>
 <p>ntag21x enable or disable access </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>is the set access </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>set access </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1975,8 +1975,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the authenticate limitation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>is the authenticate limitation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>authenticate limitation </td></tr>
   </table>
   </dd>
 </dl>
@@ -2023,8 +2023,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the dynamic lock </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*lock</td><td>points to a lock buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*lock</td><td>pointer to a lock buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2098,8 +2098,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the mirror </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mirror</td><td>is the chip mirror mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mirror</td><td>chip mirror mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2145,8 +2145,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the mirror byte </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td>is the mirror byte </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td>mirror byte </td></tr>
   </table>
   </dd>
 </dl>
@@ -2192,8 +2192,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the mirror page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the mirror page </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>mirror page </td></tr>
   </table>
   </dd>
 </dl>
@@ -2239,8 +2239,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the modulation mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the modulation mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>modulation mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2286,8 +2286,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the pack </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>points to a pack buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>pointer to a pack buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2335,8 +2335,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the password </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>points to a password buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>pointer to a password buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2384,8 +2384,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the start page of protection </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the start page </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>start page </td></tr>
   </table>
   </dd>
 </dl>
@@ -2431,8 +2431,8 @@ Functions</h2></td></tr>
 <p>ntag21x set the static lock </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*lock</td><td>points to a lock buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*lock</td><td>pointer to a lock buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2484,8 +2484,8 @@ Functions</h2></td></tr>
 <p>ntag21x wake up </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>points to a type buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>pointer to a type buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2539,9 +2539,9 @@ Functions</h2></td></tr>
 <p>ntag21x write page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an ntag21x handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the page of write </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an ntag21x handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>page of write </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
