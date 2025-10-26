@@ -10,7 +10,7 @@
 
 NTAG 213, NTAG 215, and NTAG 216 have been developed by NXP® Semiconductors as standard NFC tag ICs to be used in mass-market applications such as retail, gaming, and consumer electronics, in combination with NFC devices or NFC-compliant Proximity Coupling Devices. NTAG 213, NTAG 215, and NTAG 216 (from now on, generally called NTAG 21x) are designed to fully comply to NFC Forum Type 2 Tag and ISO/IEC14443 Type A specifications.Target applications include Out-of-Home and print media smart advertisement, SoLoMo applications, product authentication, NFC shelf labels, and mobile companion tags.Target use cases include Out-of-Home smart advertisement, product authentication, mobile companion tags, Bluetooth® or Wi-Fi pairing, electronic shelf labels, and business cards. NTAG 21x memory can also be segmented to implement multiple applications at the same time.Thanks to the high input capacitance, NTAG 21x tag ICs are particularly tailored for applications requiring small footprints, without compromise on performance. Small NFC tags can be more easily embedded into, e.g., product labels or electronic devices.The mechanical and electrical specifications of NTAG 21x are tailored to meet the requirements of inlay and tag manufacturers.
 
-LibDriver NTAG21X is a full-featured driver of NTAG21X launched by LibDriver.It provides the function of read page, write page and so on. LibDriver is MISRA compliant.
+LibDriver NTAG21X is a full-featured driver for NTAG21X, launched by LibDriver.It provides page reading, page writing and additional features. LibDriver is MISRA compliant.
 
 This repository includes submodule and you shold add "--recursive" to clone the whole project.
 
