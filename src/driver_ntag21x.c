@@ -1396,6 +1396,12 @@ uint8_t ntag21x_compatibility_write_page(ntag21x_handle_t *handle, uint8_t page,
         
         return 1;                                                                                /* return error */
     }
+    if (output_len != 1)                                                                         /* check the output_len */
+    {
+        handle->debug_print("ntag21x: output_len is invalid.\n");                                /* output_len is invalid */
+        
+        return 4;                                                                                /* return error */
+    }
     if (output_buf[0] != 0xA)                                                                    /* check the result */
     {
         handle->debug_print("ntag21x: ack error.\n");                                            /* ack error */
